@@ -16,14 +16,14 @@ public class Admin {
     @Field("_id")
     private ObjectId id;
 
-    @DBRef
+    @DBRef(lazy = false)
     @Field("user")
     private User user;
 
     @Field("creation_date")
     private Date creationDate;
 
-    @DBRef
+    @DBRef(lazy = true)
     @Field("created_by")
     private User createdBy;
 }

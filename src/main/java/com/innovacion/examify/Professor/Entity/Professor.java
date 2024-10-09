@@ -42,7 +42,7 @@ public class Professor {
     @Field("last_modified")
     private Date lastModified;
 
-    @DBRef
+    @DBRef(lazy = true)
     @Field("created_by")
     private User createdBy;
 }

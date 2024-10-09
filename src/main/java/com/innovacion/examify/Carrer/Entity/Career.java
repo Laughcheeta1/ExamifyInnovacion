@@ -26,7 +26,7 @@ public class Career {
     @Field("created_at")
     private Date createdAt;
 
-    @DBRef
+    @DBRef(lazy = true)
     @Field("created_by")
     private User createdBy;
 }

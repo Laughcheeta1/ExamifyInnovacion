@@ -26,7 +26,7 @@ public class User {
     @Field("semester")
     private byte semester;
 
-    @DBRef
+    @DBRef(lazy = false)
     @Field("career")
     private Career career;
 
