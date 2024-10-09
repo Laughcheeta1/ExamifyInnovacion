@@ -1,8 +1,10 @@
 package com.innovacion.examify.Professor.Entity;
 
+import com.innovacion.examify.User.Entity.User;
 import lombok.Data;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -40,6 +42,7 @@ public class Professor {
     @Field("last_modified")
     private Date lastModified;
 
+    @DBRef
     @Field("created_by")
-    private String createdBy;
+    private User createdBy;
 }
