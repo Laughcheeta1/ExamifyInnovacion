@@ -24,4 +24,7 @@ public class Topic {
 
     @Field("creation_date")
     private Date creationDate;
+
+    @Field("created_by")
+    private String createdBy;
 }

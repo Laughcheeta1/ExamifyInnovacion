@@ -39,4 +39,7 @@ public class Professor {
 
     @Field("last_modified")
     private Date lastModified;
+
+    @Field("created_by")
+    private String createdBy;
 }
