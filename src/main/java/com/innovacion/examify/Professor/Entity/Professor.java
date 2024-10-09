@@ -1,6 +1,8 @@
 package com.innovacion.examify.Professor.Entity;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -10,6 +12,10 @@ import java.util.List;
 @Document("Professor")
 @Data
 public class Professor {
+    @Id
+    @Field("_id")
+    private ObjectId id;
+
     @Field("name")
     private String name;
 
