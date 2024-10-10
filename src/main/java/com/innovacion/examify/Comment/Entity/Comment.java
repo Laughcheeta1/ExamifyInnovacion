@@ -19,7 +19,7 @@ public class Comment {
     @Field("_id")
     private ObjectId id;
 
-    @DBRef
+    @DBRef(lazy = false)
     @Field("user")
     private User user;
 
@@ -29,7 +29,7 @@ public class Comment {
     @Field("date_time")
     private Date dateTime;
 
-    @DBRef
+    @DBRef(lazy = false)
     @Field("ratings")
     private List<Rating> ratings;
 }
